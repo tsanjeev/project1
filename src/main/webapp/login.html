@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">TPRMS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Sign Up / Login</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+              <div class="container">
+                  <div class="row">
+                    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                      <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <a href="#" id="register-form-link" class="register-form-link btn btn-primary active">Sign Up</a>
+                            <a href="#" id="login-form-link" class="login-form-link btn btn-outline-primary">Login</a>
+        
+                          <form class="form-signin" id="login-form"  style="display: none" action="login" method="post">
+                            <div class="form-label-group">
+                              <input type="text" id="username" name="usernamelog" class="form-control" placeholder="Username" required autofocus>
+                            </div>
+                            <br>
+                            <div class="form-label-group">
+                              <input type="password" id="password" name="passwordlog" class="form-control" placeholder="Password" required>
+                            </div>
+              
+                            <div class="custom-control custom-checkbox mb-3">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">Remember password</label>
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</button>
+                            
+                          </form>
+                          <form class="form-signup" id="register-form" action="signup" method="post">
+                              <div class="form-label-group">
+                                    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name" required autofocus>
+
+                              </div>
+                              <br>
+                              <div class="form-label-group">
+                                  <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name" required autofocus>
+                              </div>
+                              <br>
+                              <div class="form-label-group">
+                                <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+                              </div>
+                              <br>
+                              <div class="form-label-group">
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                              </div>
+                
+                              <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                <label class="custom-control-label" for="customCheck">Remember password</label>
+
+                              </div>
+                              
+                              <div class="form-group">
+								    <label for="position">Position Title</label>
+								    <select class="form-control" name="title" id="title">
+								      <option>Employee</option>
+								      <option>Supervisor</option>
+								      <option>Department Head</option>
+								      <option>BenCo</option>
+								    </select>
+							  </div>
+							  <div class="form-group">
+								    <label for="department">Department</label>
+								    <select class="form-control" name="department" id="department">
+								      <option>Department 1</option>
+								      <option>Department 2</option>
+								      <option>Department 3</option>
+								      <option>Department 4</option>
+								    </select>
+							  </div>
+                               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="signup-submit">sign up</button>
+                              
+                            </form>
+                           
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+        <!--<script type="text/javascript" src="js/signup.js"></script>-->
+
+</body>
+
+</html>
