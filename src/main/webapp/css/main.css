@@ -29,3 +29,13 @@
 #btn-float-right {
     float: right;
 }
+
+.center-text {
+	text-align: center;
+}
+
+table {
+	border: 5px solid grey;
+	text-align: center;
+	width: 50%;
+}

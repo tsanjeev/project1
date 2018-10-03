@@ -17,5 +17,15 @@ public class UserServices {
 			return user;
 		}
 		
+		public static User updateUser(User u) throws Exception {
+			ud.userUpdate(u);
+			User user = ud.getUserByCred(u);
+			return user;
+		}
+		
+		public static void deleteUser(User u) throws Exception {
+			ud.userDelete(u);
+		}
+		
 		
 }

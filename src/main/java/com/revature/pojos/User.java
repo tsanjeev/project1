@@ -2,6 +2,7 @@ package com.revature.pojos;
 
 public class User {
 		
+		private int employeeID;
 		private String firstName;
 		private String lastName;
 		private String userName;
@@ -85,10 +86,21 @@ public class User {
 			this.department = department;
 		}
 
+		
+
+		public int getEmployeeID() {
+			return employeeID;
+		}
+
+		public void setEmployeeID(int employeeID) {
+			this.employeeID = employeeID;
+		}
+
 		@Override
 		public String toString() {
-			return "User [firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName + ", passWord="
-					+ passWord + ", title=" + title + ", department=" + department + ", availamt=" + availamt + "]";
+			return "User [employeeID=" + employeeID + ", firstName=" + firstName + ", lastName=" + lastName
+					+ ", userName=" + userName + ", passWord=" + passWord + ", title=" + title + ", department="
+					+ department + ", availamt=" + availamt + "]";
 		}
 
 		

@@ -1,40 +1,49 @@
 package com.revature.pojos;
 
-import java.sql.Date;
+
 
 public class Form {
+		
 		private int formID;
-		private double cost;
-		private double amount;
+		private int employeeID;
+		private String firstname;
+		private String lastname;
+		
 		private String location;
-		private String eventType;
-		private String details;
+		private String city;
+		private String state;
+		private String zip;
+		private String description;
+		
+		private String currDate;
+		private String startDate;
+		private String time;
+		private String event;
 		private String justification;
-		private String status;
-		private Date eventDate;
-		private Date currDate;
+		private int status;
+		
 		private String grade;
-		private String userName;
-		private String notes;  
+		private double cost; 
+		private double projected;
 		
 		public Form() {}
-		
-		public Form(int formID, double cost, double amount, String loc, String eventType, 
-				String details, String justification, String status, Date eventDate, String grade,
-				String uName) {
+
+
+		public Form(int formID, int employeeID, String firstname, String lastname, double cost, String loc, String eventType, 
+				String details, String justification, int status, String eventDate, String time, String grade) {
 			this.formID = formID;
+			this.employeeID = employeeID;
+			this.setFirstname(firstname);
+			this.setLastname(lastname);
 			this.cost = cost;
-			this.amount = amount;
 			this.location = loc;
-			this.eventType = eventType;
-			this.details = details;
+			this.event = eventType;
+			this.setTime(time);
+			this.description = details;
 			this.justification = justification;
 			this.status = status;
-			this.eventDate = eventDate;
-			java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
-			this.currDate = date;
+			this.startDate = eventDate;
 			this.grade = grade;
-			this.setUserName(uName);
 		}
 		public int getFormID() {
 			return formID;
@@ -52,14 +61,6 @@ public class Form {
 			this.cost = cost;
 		}
 
-		public double getAmount() {
-			return amount;
-		}
-
-		public void setAmount(double amount) {
-			this.amount = amount;
-		}
-
 		public String getLocation() {
 			return location;
 		}
@@ -69,19 +70,19 @@ public class Form {
 		}
 
 		public String getEventType() {
-			return eventType;
+			return event;
 		}
 
 		public void setEventType(String eventType) {
-			this.eventType = eventType;
+			this.event = eventType;
 		}
 
-		public String getDetails() {
-			return details;
+		public String getDescription() {
+			return description;
 		}
 
-		public void setDetails(String details) {
-			this.details = details;
+		public void setDescription(String details) {
+			this.description = details;
 		}
 
 		public String getJustification() {
@@ -92,27 +93,27 @@ public class Form {
 			this.justification = justification;
 		}
 
-		public String getStatus() {
+		public int getStatus() {
 			return status;
 		}
 
-		public void setStatus(String status) {
+		public void setStatus(int status) {
 			this.status = status;
 		}
 
-		public Date getEventDate() {
-			return eventDate;
+		public String getStartDate() {
+			return startDate;
 		}
 
-		public void setEventDate(Date eventDate) {
-			this.eventDate = eventDate;
+		public void setStartDate(String eventDate) {
+			this.startDate = eventDate;
 		}
 
-		public Date getCurrDate() {
+		public String getCurrDate() {
 			return currDate;
 		}
 
-		public void setCurrDate(Date currDate) {
+		public void setCurrDate(String currDate) {
 			this.currDate = currDate;
 		}
 
@@ -124,20 +125,84 @@ public class Form {
 			this.grade = grade;
 		}
 
-		public String getUserName() {
-			return userName;
+
+		public int getEmployeeID() {
+			return employeeID;
 		}
 
-		public void setUserName(String userName) {
-			this.userName = userName;
+		public void setEmployeeID(int employeeID) {
+			this.employeeID = employeeID;
 		}
 
-		public String getNotes() {
-			return notes;
+
+		public String getFirstname() {
+			return firstname;
 		}
 
-		public void setNotes(String notes) {
-			this.notes = notes;
+
+		public void setFirstname(String firstname) {
+			this.firstname = firstname;
 		}
+
+
+		public String getLastname() {
+			return lastname;
+		}
+
+
+		public void setLastname(String lastname) {
+			this.lastname = lastname;
+		}
+
+
+		public String getTime() {
+			return time;
+		}
+
+
+		public void setTime(String time) {
+			this.time = time;
+		}
+
+
+		public String getCity() {
+			return city;
+		}
+
+
+		public void setCity(String city) {
+			this.city = city;
+		}
+
+
+		public String getState() {
+			return state;
+		}
+
+
+		public void setState(String state) {
+			this.state = state;
+		}
+
+
+		public String getZip() {
+			return zip;
+		}
+
+
+		public void setZip(String zip) {
+			this.zip = zip;
+		}
+
+
+		public double getProjected() {
+			return projected;
+		}
+
+
+		public void setProjected(double projected) {
+			this.projected = projected;
+		}
+
 		
 }

@@ -141,6 +141,7 @@ public class UserDAOImp implements UserDAO{
 			
 			while (rs.next()) {
 				
+				newUser.setEmployeeID(rs.getInt("employeeid"));
 				newUser.setFirstName(rs.getString("firstname"));
 				newUser.setLastName(rs.getString("lastname"));
 				newUser.setUserName(rs.getString("username"));

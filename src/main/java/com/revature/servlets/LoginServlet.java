@@ -16,9 +16,9 @@ public class LoginServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		HttpSession sess = req.getSession(false);
 		
+		
 		if(sess == null || sess.getAttribute("title") == null){
-			resp.sendRedirect("../login.html");
-			System.out.println("inside doget login");
+			req.getRequestDispatcher("../login.html").forward(req, resp);
 		}
 		else {
 			resp.sendRedirect("employee");
@@ -29,17 +29,17 @@ public class LoginServlet extends HttpServlet{
 		String username = req.getParameter("usernamelog");
 		String password = req.getParameter("passwordlog");
 		
-		
 		User u = UserServices.login(new User(username, password));
-		if (u != null) {
+		if (u.getTitle() != null) {
 			System.out.println(u);
 			HttpSession sess = req.getSession(true);
 			sess.setAttribute("username", u.getUserName());
 			sess.setAttribute("title", u.getTitle());
+			sess.setAttribute("password", u.getPassWord());
 			resp.sendRedirect("employee");
 			
 		} else {
-			resp.sendRedirect("login.html");
+			req.getRequestDispatcher("../login.html").forward(req, resp);
 		}
 	}
 

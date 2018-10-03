@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 public class HomeServlet extends HttpServlet{
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		req.getRequestDispatcher("index.html").forward(req, resp);
+		req.getRequestDispatcher("../index.html").forward(req, resp);
 	}
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

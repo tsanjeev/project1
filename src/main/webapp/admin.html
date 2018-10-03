@@ -1,12 +1,94 @@
-<!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Admin Profile</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-	<h3>Welcome Home Admin</h3>
-	<br>
-	<a href="logout">logout</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#">TPRMS</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login">Sign Up / Login</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+               </div>
+           </nav>
+           
+          
+           		
+           		<div class="Jumbotron">
+           			<h1 id="welcome-text" class=display-4></h1>
+           			<h3 id="title-pos"></h3>
+           		</div>
+           		<br>
+           		<br>
+				<br>
+				
+					<div class="row">
+						<div class="col"></div>
+						<div class="col-md-10">
+						<h5 id="admin"></h5>
+						<h4>Pending Requests: </h4>
+						<table class="table table-striped table-responsive" id="rforms">
+							  <thead>
+							    <tr>
+							      <th scope="col">Form#</th>
+							      <th scope="col">Emp#</th>	
+							      <th scope="col">First Name</th>
+							      <th scope="col">Last Name</th>
+							      <th scope="col">Loc</th>
+							      <th scope="col">City</th>
+							      <th scope="col">State</th>
+							      <th scope="col">Zip</th>
+							      <th scope="col">Desc</th>
+							      <th scope="col">Status</th>
+							      <th scope="col">Submitted</th>
+							      <th scope="col">Event Date</th>
+							      <th scope="col">Time</th>
+							      <th scope="col">Grade</th>
+							      <th scope="col">Event</th>
+							      <th scope="col">Justification</th>
+							      <th scope="col">Cost</th>
+							      <th scope="col">Projected</th>
+							      <th scope="col">Approve/
+							      Deny
+							      </th>
+							    </tr>
+							  </thead>
+							  <tbody id="rforms-body">
+							  </tbody>
+						</table>
+					</div>
+					<div class="col"></div>
+					</div>
+					<br>
+					<br>
+				<div class="text-center">
+						<h3><a  href="logout">logout</a></h3>
+				</div>
+				     
+    
+ 		<script type="text/javascript" src="../js/admin.js"></script>
+		
 </body>
 </html>

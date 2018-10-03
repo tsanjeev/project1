@@ -19,15 +19,11 @@ public class SignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = -8327599451333501985L;
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		resp.sendRedirect("http://www.google.com");
+	
 	}
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		
-		//String userString = req.getReader().readLine();
-		//System.out.println(userString);
-		//ObjectMapper om = new ObjectMapper();
-		//User user = om.readValue(userString, User.class);
 		
 		String firstname = req.getParameter("firstname");
 		String lastname = req.getParameter("lastname");
